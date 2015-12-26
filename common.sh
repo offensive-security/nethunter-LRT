@@ -19,9 +19,9 @@ isEmpty () {
 }
 
 isAdbConnected () {
-	adbGoodState="device"
+    adbGoodState="device"
     adbState=$(adb get-state)
-    if [ "$adbState" = "$adbGoodState" ] ; then echo "ADB device detected."; else echo "ADB DEVICE NOT DETECTED!!!\nAborting."; exit 1; fi
+    if [ "$adbState" = "$adbGoodState" ] || [ "$adbState" = "recovery" ] ; then echo "ADB device detected."; else echo "ADB DEVICE NOT DETECTED!!!\nAborting."; exit 1; fi
 }
 
 opoModelCheck () {
