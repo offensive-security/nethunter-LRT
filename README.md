@@ -21,7 +21,7 @@ The **Nethunter Linux Root Toolkit** is a little collection of scripts to do som
 
 2. Download the correct Factory Image for your device and put it in the folder `/stockImage`:
     -  *Nexus devices:* from [Google Nexus Images](https://developers.google.com/android/nexus/images?hl=en)
-    - *OnePlusOne:*  from [cyngn.com](https://cyngn.com/support) (donwload the fastboot one)
+    -  *OnePlusOne:* from [cyngn.com](https://cyngn.com/support) (donwload the fastboot one)
  
 3. Download the correct TWRP image for your device from [TWRP WEB](https://twrp.me/Devices/) and put it in the folder `/twrpImage`
 
@@ -38,6 +38,8 @@ This script is cross device. (Nexus and OnePlus)
 
 Unlock any nexus/OP device using the script `oemUnlock.sh`
 
+This script needs to be launched like `./oemUnlock.sh`.
+
 Is the first thing you will need to do in any new device.
 
 Skip this if your phone bootloader is already unlocked.
@@ -47,6 +49,8 @@ Nexus Flash Stock:
 ---------------
 (Only nexus)
 The script `stockNexusFlash.sh` will flash the google factory image in the device. 
+
+This script needs to be launched like `./stockNexusFlash.sh`.
 
 This way you will get a clean phone to install nethunter on it. (This will delete all the device data)
 
@@ -59,6 +63,8 @@ OPO Flash Stock:
 
 The script `stockOpoFlash.sh` will flash the opo factory image in the device. 
 
+This script needs to be launched like `./stockOpoFlash.sh 16gb` for the 16GB version or `./stockOpoFlash.sh 64gb` for the 64GB version.
+
 This way you will get a clean phone to install nethunter on it. (This will delete all the device data)
 
 Skip this if your phone has a clean flash done/ or you are using other rom.
@@ -70,6 +76,8 @@ Custom Recovery (TWRP) + SuperSU (root) + Kali Linux Nethunter
 This script is cross device. (Nexus and OnePlus)
 
 The script `twrpFlash.sh`  will flash the custom recovery and push the needed files to the phone.
+
+This script needs to be launched like `./twrpFlash.sh`.
 
 Once you are in the TWRP recovery you will need to flash both zips using the flash utility in TWRP.
 
