@@ -29,9 +29,11 @@ The **Nethunter Linux Root Toolkit** is a little collection of scripts to do som
 
 5. Put the nethunter zip (Atm you need to build it see [Latest nethunter build instructions](https://github.com/offensive-security/kali-nethunter/tree/newinstaller-fj/AnyKernel2)) in the folder `/kaliNethunter`
 
-Now you are ready ^^.
+Now you are ready to go ^^.
 
 -----------------
+
+
 OEM Unlock:
 ---------------
 This script is cross device. (Nexus and OnePlus)
@@ -44,10 +46,11 @@ Is the first thing you will need to do in any new device.
 
 Skip this if your phone bootloader is already unlocked.
 
------------------
+
 Nexus Flash Stock:
 ---------------
 (Only nexus)
+
 The script `stockNexusFlash.sh` will flash the google factory image in the device. 
 
 This script needs to be launched like `./stockNexusFlash.sh`.
@@ -56,7 +59,7 @@ This way you will get a clean phone to install nethunter on it. (This will delet
 
 Skip this if your phone has a clean flash done/ or you are using other rom.
 
------------------
+
 OPO Flash Stock:
 ---------------
 (Only OnePlusOne)
@@ -69,7 +72,7 @@ This way you will get a clean phone to install nethunter on it. (This will delet
 
 Skip this if your phone has a clean flash done/ or you are using other rom.
 
------------------
+
 Custom Recovery (TWRP) + SuperSU (root) + Kali Linux Nethunter
 -------------------------------------
 
@@ -79,10 +82,11 @@ The script `twrpFlash.sh`  will flash the custom recovery and push the needed fi
 
 This script needs to be launched like `./twrpFlash.sh`.
 
-Once you are in the TWRP recovery you will need to flash both zips using the flash utility in TWRP.
+Once you are in the TWRP recovery you will need to flash both zips using the zipFlash utility in TWRP.
 
-
+<br>
 -----------------
+
 More info: Read the source ^^.
 
 LICENSE: 
