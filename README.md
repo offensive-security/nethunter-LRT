@@ -85,7 +85,7 @@ This script needs to be launched like `./twrpFlash.sh`.
 Once you are in the TWRP recovery you will need to flash both zips using the zipFlash utility in TWRP.
 
 <br>
------------------
+<hr>
 
 More info: Read the source ^^.
 
