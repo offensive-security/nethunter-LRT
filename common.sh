@@ -14,14 +14,12 @@ deleteGitIgnore () {
 }
 
 isEmpty () { 
-    files=$1
-    if find $files -maxdepth 0 -empty | read v; then echo "Dir $1 is empty. Files are missing\nAborting."; exit 1; else echo "Dir $1 has files"; fi
+    if find $1 -maxdepth 0 -empty | read v; then echo "Dir $1 is empty. Files are missing\nAborting."; exit 1; else echo "Dir $1 has files"; fi
 }
 
 isAdbConnected () {
-    adbGoodState="device"
     adbState=$(adb get-state)
-    if [ "$adbState" = "$adbGoodState" ] || [ "$adbState" = "recovery" ] ; then echo "ADB device detected."; else echo "ADB DEVICE NOT DETECTED!!!\nAborting."; exit 1; fi
+    if [ "$adbState" = "device" ] || [ "$adbState" = "recovery" ] ; then echo "ADB device detected."; else echo "ADB DEVICE NOT DETECTED!!!\nAborting."; exit 1; fi
 }
 
 opoModelCheck () {

@@ -66,18 +66,23 @@ fastboot flash recovery $twrpImage
 sleep 3
 echo "Flashing TWRP image DONE\n"
 
-echo "Booting into TWRP"
+echo "Booting into TWRP (20 secs dont worry)"
 fastboot boot $twrpImage
+sleep 20
 echo "Booting into TWRP DONE\n"
 
-echo "ALL FINE\n"
-echo "TWRP will show up soon in the phone"
+echo "Installing SuperSU"
+adb shell "twrp install $sdSupersu"
+echo "Installing SuperSU DONE!\n"
 
+echo "Installing Kali Linux Nethunter"
+sleep 5
+adb shell "twrp install $sdnh"
+echo "Installing Kali Linux Nethunter DONE!"
 
-echo "SuperSu zip is in $sdSupersu, flash it via TWRP first."
-echo "Kali Nethunter zip is in $sdnh, flash it via TWRP AFTER superSu"
-echo "You can flash both at the same time but select superSu first in TWRP\n"
-
-echo "!!!! If TWRP ask to root the device DONT DO IT. !!!!"
+echo "Rebooting into Kali Linux Nethunter"
+sleep 3
+adb reboot
+echo "Everything is installed. Phone should be booting up! Enjoy\n"
 exit
 
