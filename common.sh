@@ -3,12 +3,14 @@
 
 # HELP FUNCTIONS
 
-isAdbInPath () {
-    command -v adb >/dev/null 2>&1 && echo "adb FOUND" || { echo >&2 "We require adb but it's not installed/in path.\nAborting."; exit 1; }
+isProgramInPath () {
+	echo "Checking if $1 is installed"
+    command -v $1 >/dev/null 2>&1 && echo "$1 FOUND" || { echo >&2 "We require $1 but it's not installed/in path.\nAborting."; exit 1; }
+    echo "Checking if $1 is installed DONE\n"
 }
 
-isFastbootInPath () {
-    command -v fastboot >/dev/null 2>&1 && echo "fastboot FOUND" || { echo >&2 "We require fastboot but it's not installed/in path.\nAborting."; exit 1; }
+deleteGitIgnore () { 
+    rm -rf $1.gitignore
 }
 
 isEmpty () { 
@@ -20,4 +22,31 @@ isAdbConnected () {
 	adbGoodState="device"
     adbState=$(adb get-state)
     if [ "$adbState" = "$adbGoodState" ] ; then echo "ADB device detected."; else echo "ADB DEVICE NOT DETECTED!!!\nAborting."; exit 1; fi
+}
+
+opoModelCheck () {
+    opo16="16gb"
+    opo64="64gb"
+    if [ -z "$1" ]
+        then
+            echo "No model supplied\nAborting."
+            exit 1
+        else
+            if [ "$1" = "$opo16" ] || [ "$1" = "$opo64" ] ; then echo "Using $1 userData for flash"; else echo "Model argument found but invalid ($1), check the README!!!\nAborting."; exit 1; fi
+            if [ "$1" = "$opo16" ] ; then fUserData="userdata.img"; fi
+            if [ "$1" = "$opo64" ] ; then fUserData="userdata_64G.img"; fi
+    fi
+
+}
+
+doCommonChecks () {
+
+    isProgramInPath adb
+
+    isProgramInPath fastboot
+
+    echo "Adb connection check"
+    isAdbConnected
+    echo "Adb connection check DONE\n"
+
 }

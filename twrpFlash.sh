@@ -1,24 +1,26 @@
 #!/bin/sh
 
+# require functions
+. ./common.sh
+
 # CONSTANTS
 
 # TWRP 
 twrpImageDir=twrpImage/
+deleteGitIgnore $twrpImageDir
 twrpImage="$twrpImageDir"*
 
 # SuperSU
 superSuDir=superSu/
+deleteGitIgnore $superSuDir
 superSuZip="$superSuDir"*
 sdSupersu="/sdcard/supersu.zip"
 
 # Kali Nethunter
 nhDir=kaliNethunter/
+deleteGitIgnore $nhDir
 nhZip="$nhDir"*
 sdnh="/sdcard/kaliNethunter.zip"
-
-
-# require functions
-. ./common.sh
 
 
 # INIT
@@ -27,17 +29,7 @@ echo "NETHUNTER LINUX FLASH (TWRP, SuperSU and Kali Nethunter)\n"
 
 echo "CHECKING PRE-REQUISITES\n"
 
-echo "Checking if adb is installed"
-isAdbInPath
-echo "Checking if adb is installed DONE\n"
-
-echo "Checking if fastboot is installed"
-isFastbootInPath
-echo "Checking if fastboot is installed DONE\n"
-
-echo "Adb connection check"
-isAdbConnected
-echo "Adb connection check DONE\n"
+doCommonChecks
 
 echo "Checking TWRP image existence"
 isEmpty $twrpImageDir

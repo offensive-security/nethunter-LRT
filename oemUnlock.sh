@@ -9,17 +9,7 @@ echo "NOTE: THIS WILL FACTORY RESET THE DEVICE (15 secs to cancel using 'ctrl + 
 sleep 15
 echo "CHECKING PRE-REQUISITES\n"
 
-echo "Checking if adb is installed"
-isAdbInPath
-echo "Checking if adb is installed DONE\n"
-
-echo "Checking if fastboot is installed"
-isFastbootInPath
-echo "Checking if fastboot is installed DONE\n"
-
-echo "Adb connection check"
-isAdbConnected
-echo "Adb connection check DONE\n"
+doCommonChecks
 
 echo "CHECKING PRE-REQUISITES DONE\n"
 sleep 3

@@ -1,30 +1,26 @@
 #!/bin/sh
 
+# require functions
+. ./common.sh
+
 # CONSTANTS
 
 stockImageDir=stockImage/
+deleteGitIgnore $stockImageDir
+
 romExtractionDir=_extracted
 
-# require functions
-. ./common.sh
 
 # INIT
 
 echo "NETHUNTER LINUX FLASH (STOCK NEXUS GOOGLE IMAGES)\n"
-
+echo "NOTE: THIS WILL FACTORY RESET THE DEVICE (15 secs to cancel using 'ctrl + c')\n"
+sleep 15
 echo "CHECKING PRE-REQUISITES\n"
 
-echo "Checking if adb is installed"
-isAdbInPath
-echo "Checking if adb is installed DONE\n"
+doCommonChecks
 
-echo "Checking if fastboot is installed"
-isFastbootInPath
-echo "Checking if fastboot is installed DONE\n"
-
-echo "Adb connection check"
-isAdbConnected
-echo "Adb connection check DONE\n"
+isProgramInPath tar
 
 echo "Checking stock image existence"
 isEmpty $stockImageDir
@@ -38,11 +34,11 @@ mkdir $romExtractionDir
 echo "Creating tmp dir $romExtractionDir DONE\n"
 
 echo "Extracting $(ls $stockImageDir*)"
-tar -xvf $stockImageDir* -C _extracted
+tar -xvf $stockImageDir* -C $romExtractionDir
 echo "EXTACTING $(ls $stockImageDir*) DONE\n"
 
 echo "cd to $romExtractionDir"
-cd _extracted/*
+cd $romExtractionDir/*
 echo "cd to $romExtractionDir DONE\n"
 
 echo "Rebooting into bootloader"
