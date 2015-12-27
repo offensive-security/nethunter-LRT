@@ -56,7 +56,6 @@ fastboot flash dbi sdi.mbn
 sleep 3
 fastboot flash aboot emmc_appsboot.mbn
 sleep 3
-echo "rebooting into bootloader..."
 fastboot reboot-bootloader
 sleep 5
 fastboot flash modem NON-HLOS.bin
@@ -69,7 +68,6 @@ fastboot flash LOGO logo.bin
 sleep 3
 fastboot flash oppostanvbk static_nvbk.bin
 sleep 3
-echo "rebooting into bootloader..."
 fastboot reboot-bootloader
 sleep 5
 fastboot flash boot boot.img
