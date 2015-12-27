@@ -1,7 +1,7 @@
 # nethunter-LRT
 
 
-The **Nethunter Linux Root Toolkit** is a little collection of scripts to do some common things needed to **install Kali Linux Nethunter from Linux**.
+The **Nethunter Linux Root Toolkit** is a little collection of scripts to do some common things needed to **install Kali Linux Nethunter from Linux and OS X (Mac OS)**.
 
 
 ***Tools needed:*** 
@@ -28,6 +28,8 @@ The **Nethunter Linux Root Toolkit** is a little collection of scripts to do som
 4. Download Latest SuperSu (BETA) from [XDA_Chainfire post](http://forum.xda-developers.com/showpost.php?p=64161125&postcount=3) and put it in the folder `/superSu`
 
 5. Put the nethunter zip (Atm you need to build it see [Latest nethunter build instructions](https://github.com/offensive-security/kali-nethunter/tree/newinstaller-fj/AnyKernel2)) in the folder `/kaliNethunter`
+
+Don't rename or decompress any zip/image, the script will handle it.
 
 Now you are ready to go ^^.
 
@@ -78,11 +80,17 @@ Custom Recovery (TWRP) + SuperSU (root) + Kali Linux Nethunter
 
 This script is cross device. (Nexus and OnePlus)
 
-The script `twrpFlash.sh`  will flash the custom recovery and push the needed files to the phone.
+Should be runned on top of a clean rom install.
+
+The script `twrpFlash.sh`  will flash the custom recovery, superSU and Kali Linux Nethunter.
 
 This script needs to be launched like `./twrpFlash.sh`.
 
-Once you are in the TWRP recovery you will need to flash both zips using the zipFlash utility in TWRP.
+The script will install automatically everything needed for nethunter.
+
+If you using an Aroma version of the Kali Linux Nethunter zip, you will need to do a little interaction with the installer,
+then the script will end the installation and reboot the phone.
+
 
 <br>
 <hr>
