@@ -11,7 +11,7 @@ The **Nethunter Linux Root Toolkit** is a little collection of scripts to do som
  - `fastboot` installed and present in `$PATH`
  - `tar && unzip` installed and present in `$PATH`
  
-*Use google if you don't know how to install adb or fastboot, Android SDK is the best way imo.*
+*Use google if you don't know how to install adb or fastboot, Android SDK is the best way also you can use this binaries: http://tools.android.com/download.*
 
 **Assumptions:** The device is normally booted, USB debugging enabled and plugged to the Linux machine via USB cable.
 
