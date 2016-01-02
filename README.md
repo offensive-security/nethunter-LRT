@@ -1,4 +1,4 @@
-# nethunter-LRT
+# Kali Nethunter Linux Root Toolkit (LRT)
 
 
 The **Nethunter Linux Root Toolkit** is a little collection of scripts to do some common things needed to **install Kali Linux Nethunter from Linux and OS X (Mac OS)**.
