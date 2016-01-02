@@ -15,6 +15,8 @@ The **Nethunter Linux Root Toolkit** is a little collection of scripts to do som
 
 **Assumptions:** The device is normally booted, USB debugging enabled and plugged to the Linux machine via USB cable.
 
+**IMPORTANT NOTE**: To ensure a hassle free installation, use USB 2.0 ports during the installation. If installations fail inexplicably, it's most likely USB version standard issue. We use a powered USB 2.0 hub to connect our OPO to a computer during installations!
+
 **How to make this work:**
 
 1. Clone the repository and `cd` to the `Nethunter-LRT/` folder.
@@ -102,7 +104,7 @@ More info: Read the source ^^.
 
 LICENSE: 
 
-> No licensed, do whatever you want with this.
+> GPL2
 
 DISCLAIMER: 
 
