@@ -74,6 +74,7 @@ This way you will get a clean phone to install nethunter on it. (This will delet
 
 Skip this if your phone has a clean flash done/ or you are using other rom.
 
+Don't forget to make sure your phone is in Developer mode, and you have accepted the RSA Key Dialog.
 
 Custom Recovery (TWRP) + SuperSU (root) + Kali Linux Nethunter
 -------------------------------------
@@ -90,6 +91,8 @@ The script will install automatically everything needed for nethunter.
 
 If you using an Aroma version of the Kali Linux Nethunter zip, you will need to do a little interaction with the installer,
 then the script will end the installation and reboot the phone.
+
+Don't forget to make sure your phone is in Developer mode, and you have accepted the RSA Key Dialog.
 
 
 <br>
