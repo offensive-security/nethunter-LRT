@@ -72,4 +72,4 @@ If you using an Aroma version of the Kali Linux Nethunter zip, you will need to 
 
 DISCLAIMER: 
 
-> This scripts are distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY, to the extent permitted by law; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. (Don't blame me if something doesn't work/goes wrong ^^) Pull requests are welcome.
+> This scripts are distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY, to the extent permitted by law; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Pull requests are welcome.
