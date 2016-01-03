@@ -1,14 +1,13 @@
 # Kali Nethunter Linux Root Toolkit (LRT)
 
 
-The **Nethunter Linux Root Toolkit** is a little collection of scripts to do some common things needed to **install Kali Linux Nethunter from Linux and OS X (Mac OS)**.
+The **Nethunter Linux Root Toolkit** is a collection of bash scripts scripts which setup and install Kali Linux Nethunter from Linux and OS X (Mac OS), onto a [NetHunter supported device](https://github.com/offensive-security/kali-nethunter/wiki#10-supported-devices-and-roms).
 
 
 ***Tools needed:*** 
 
- - USB debugging enabled in the phone.
- - `adb` installed and present in `$PATH`
- - `fastboot` installed and present in `$PATH`
+ - USB debugging enabled on the phone.
+ - `adb` and `fastboot` installed and present in `$PATH`
  - `tar && unzip` installed and present in `$PATH`
  
 *Use google if you don't know how to install adb or fastboot, Android SDK is the best way also you can use this binaries: http://tools.android.com/download.*
