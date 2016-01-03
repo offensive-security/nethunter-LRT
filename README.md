@@ -3,7 +3,7 @@
 
 The **Nethunter Linux Root Toolkit** is a collection of bash scripts which setup and install Kali Linux Nethunter from a Linux/OSX environment onto a [NetHunter supported device](https://github.com/offensive-security/kali-nethunter/wiki#10-supported-devices-and-roms).
 
-## 1.Installation Prerequisites
+##1. Installation Prerequisites
 
  - USB debugging enabled on the phone.
  - USB debugging RSA fingerprint aproved for the computer.
@@ -16,7 +16,7 @@ The **Nethunter Linux Root Toolkit** is a collection of bash scripts which setup
 
 **IMPORTANT NOTE**: To ensure a hassle free installation, use USB 2.0 ports during the installation. If installations fail inexplicably, it's most likely USB version standard issues. We use a powered USB 2.0 hub to connect our OPO to a computer during installations!
 
-## 2.LRT Setup Instructions
+##2. LRT Setup Instructions
 
 1. Clone the repository and `cd` to the `Nethunter-LRT/` folder.
 
@@ -47,10 +47,8 @@ Skip this if your phone bootloader is already unlocked.
 
 
 ###2.2 Flash Stock:
-####Nexus Flash Stock
+####Nexus Flash Stock (For Nexus devices only)
 ---------------
-(Only nexus)
-
 The script `stockNexusFlash.sh` will flash the google factory image in the device. 
 
 This script needs to be launched like `./stockNexusFlash.sh`.
@@ -59,11 +57,11 @@ This way you will get a clean phone to install nethunter on it. (This will delet
 
 Skip this if your phone has a clean flash done/ or you are using other rom.
 
+Once your phone is flashed, don't forget to make sure it's in Developer mode, and you have accepted the RSA Key Dialog.
 
-####OPO Flash Stock:
+
+####OPO Flash Stock (For OnePlus One devices only)
 ---------------
-(Only OnePlusOne)
-
 The script `stockOpoFlash.sh` will flash the opo factory image in the device. 
 
 This script needs to be launched like `./stockOpoFlash.sh 16gb` for the 16GB version or `./stockOpoFlash.sh 64gb` for the 64GB version.
@@ -72,7 +70,7 @@ This way you will get a clean phone to install nethunter on it. (This will delet
 
 Skip this if your phone has a clean flash done/ or you are using other rom.
 
-Don't forget to make sure your phone is in Developer mode, and you have accepted the RSA Key Dialog.
+Once your phone is flashed, don't forget to make sure it's in Developer mode, and you have accepted the RSA Key Dialog.
 
 
 ###2.3 Custom Recovery (TWRP) + SuperSU (root) + Kali Linux Nethunter
@@ -90,8 +88,6 @@ The script will install automatically everything needed for nethunter.
 
 If you using an Aroma version of the Kali Linux Nethunter zip, you will need to do a little interaction with the installer,
 then the script will end the installation and reboot the phone.
-
-Don't forget to make sure your phone is in Developer mode, and you have accepted the RSA Key Dialog.
 
 
 DISCLAIMER: 
