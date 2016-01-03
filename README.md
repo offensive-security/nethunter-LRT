@@ -4,9 +4,10 @@
 The **Nethunter Linux Root Toolkit** is a collection of bash scripts scripts which setup and install Kali Linux Nethunter from Linux and OS X (Mac OS), onto a [NetHunter supported device](https://github.com/offensive-security/kali-nethunter/wiki#10-supported-devices-and-roms).
 
 
-***Tools needed:*** 
+## Installation Prerequisites
 
  - USB debugging enabled on the phone.
+ - USB debugging RSA fingerprint aproved for the computer.
  - `adb` and `fastboot` installed and present in `$PATH`
  - `tar && unzip` installed and present in `$PATH`
  
@@ -14,9 +15,9 @@ The **Nethunter Linux Root Toolkit** is a collection of bash scripts scripts whi
 
 **Assumptions:** The device is normally booted, USB debugging enabled and plugged to the Linux machine via USB cable.
 
-**IMPORTANT NOTE**: To ensure a hassle free installation, use USB 2.0 ports during the installation. If installations fail inexplicably, it's most likely USB version standard issue. We use a powered USB 2.0 hub to connect our OPO to a computer during installations!
+**IMPORTANT NOTE**: To ensure a hassle free installation, use USB 2.0 ports during the installation. If installations fail inexplicably, it's most likely USB version standard issues. We use a powered USB 2.0 hub to connect our OPO to a computer during installations!
 
-**How to make this work:**
+## LRT Setup Instructions
 
 1. Clone the repository and `cd` to the `Nethunter-LRT/` folder.
 
@@ -30,9 +31,8 @@ The **Nethunter Linux Root Toolkit** is a collection of bash scripts scripts whi
 
 5. Put the nethunter zip (Atm you need to build it see [Latest nethunter build instructions](https://github.com/offensive-security/kali-nethunter/tree/newinstaller-fj/AnyKernel2)) in the folder `/kaliNethunter`
 
-Don't rename or decompress any zip/image, the script will handle it.
+Don't rename or decompress downloaded zip files or images, the script will handle it.
 
-Now you are ready to go ^^.
 
 -----------------
 
