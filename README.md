@@ -1,10 +1,9 @@
 # Kali Nethunter Linux Root Toolkit (LRT)
 
 
-The **Nethunter Linux Root Toolkit** is a collection of bash scripts scripts which setup and install Kali Linux Nethunter from Linux and OS X (Mac OS), onto a [NetHunter supported device](https://github.com/offensive-security/kali-nethunter/wiki#10-supported-devices-and-roms).
+The **Nethunter Linux Root Toolkit** is a collection of bash scripts which setup and install Kali Linux Nethunter from a Linux/OSX environment onto a [NetHunter supported device](https://github.com/offensive-security/kali-nethunter/wiki#10-supported-devices-and-roms).
 
-
-## Installation Prerequisites
+## 1.Installation Prerequisites
 
  - USB debugging enabled on the phone.
  - USB debugging RSA fingerprint aproved for the computer.
@@ -17,7 +16,7 @@ The **Nethunter Linux Root Toolkit** is a collection of bash scripts scripts whi
 
 **IMPORTANT NOTE**: To ensure a hassle free installation, use USB 2.0 ports during the installation. If installations fail inexplicably, it's most likely USB version standard issues. We use a powered USB 2.0 hub to connect our OPO to a computer during installations!
 
-## LRT Setup Instructions
+## 2.LRT Setup Instructions
 
 1. Clone the repository and `cd` to the `Nethunter-LRT/` folder.
 
@@ -34,10 +33,7 @@ The **Nethunter Linux Root Toolkit** is a collection of bash scripts scripts whi
 Don't rename or decompress downloaded zip files or images, the script will handle it.
 
 
------------------
-
-
-OEM Unlock:
+###2.1 OEM Unlock:
 ---------------
 This script is cross device. (Nexus and OnePlus)
 
@@ -50,7 +46,8 @@ Is the first thing you will need to do in any new device.
 Skip this if your phone bootloader is already unlocked.
 
 
-Nexus Flash Stock:
+###2.2 Flash Stock:
+####Nexus Flash Stock
 ---------------
 (Only nexus)
 
@@ -63,7 +60,7 @@ This way you will get a clean phone to install nethunter on it. (This will delet
 Skip this if your phone has a clean flash done/ or you are using other rom.
 
 
-OPO Flash Stock:
+####OPO Flash Stock:
 ---------------
 (Only OnePlusOne)
 
@@ -77,7 +74,8 @@ Skip this if your phone has a clean flash done/ or you are using other rom.
 
 Don't forget to make sure your phone is in Developer mode, and you have accepted the RSA Key Dialog.
 
-Custom Recovery (TWRP) + SuperSU (root) + Kali Linux Nethunter
+
+###2.3 Custom Recovery (TWRP) + SuperSU (root) + Kali Linux Nethunter
 -------------------------------------
 
 This script is cross device. (Nexus and OnePlus)
@@ -95,15 +93,6 @@ then the script will end the installation and reboot the phone.
 
 Don't forget to make sure your phone is in Developer mode, and you have accepted the RSA Key Dialog.
 
-
-<br>
-<hr>
-
-More info: Read the source ^^.
-
-LICENSE: 
-
-> GPL2
 
 DISCLAIMER: 
 
