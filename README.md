@@ -31,11 +31,13 @@ NOTE: Don't rename or decompress the downloaded zip files or images. The scripts
 
 
 ###2.1 OEM Unlock:
+--------------------
 If your device needs to be unlocked, you can use this script (for both Nexus and OnePlus devices). Skip this if your phone bootloader is already unlocked.
 
 The unlock script needs to be launched like so: `./oemUnlock.sh`.
 
 ###2.2 Flash Stock:
+---------------------
 ####Nexus Flash Stock (For Nexus devices only)
 To flash your Nexus device back to the stock image, use the `stockNexusFlash.sh` script. This way, you will get a clean phone to install NetHunter on. **This will delete all existing device data**.
 
@@ -52,14 +54,14 @@ Once your phone is flashed, don't forget to make sure it's in Developer mode and
 
 
 ###2.3 Custom Recovery (TWRP) + SuperSU (root) + Kali Linux NetHunter
-
+--------------------
 This script will install TWRP, SuperSU, and flash Kali NetHunter on your Nexus or OnePlus device. This should be run on top of a clean ROM install.
 
 This script needs to be launched like so: `./twrpFlash.sh`.
 
 If you are using an Aroma version of the Kali Linux NetHunter zip, you will need to do a little interaction with the installer, then the script will end the installation and reboot the phone.
 
-###3.0 Rejoice in your newly installed NetHunter
+###3. Rejoice in your newly installed NetHunter
 
 Be joyful and merry! You have now finished installing NetHunter on your phone and are ready for world domination. Check out some of our [NetHunter Post Installation tips](https://github.com/offensive-security/kali-nethunter/wiki#50-post-installation-setup) to get started.
 
