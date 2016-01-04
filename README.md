@@ -21,9 +21,9 @@ The **NetHunter Linux Root Toolkit** is a collection of bash scripts that setup 
     -  *Nexus devices:* from [Google Nexus Images](https://developers.google.com/android/nexus/images?hl=en)
     -  *OnePlusOne:* from [cyngn.com](https://cyngn.com/support) (donwload the fastboot version for your device)
 
-3. Download the correct TWRP image for your device from [TWRP WEB](https://twrp.me/Devices/) and put it in the folder `/twrpImage`
+3. Download the correct TWRP image for your device from [TWRP WEB](https://twrp.me/Devices/) and put it in the folder `/twrpImage`.
 
-4. Download the latest SuperSu (BETA) from [XDA_Chainfire post](http://forum.xda-developers.com/showpost.php?p=64161125&postcount=3) and put it in the folder `/superSu`
+4. Download the latest SuperSu (BETA) from [XDA_Chainfire post](http://forum.xda-developers.com/showpost.php?p=64161125&postcount=3) and put it in the folder `/superSu`.
 
 5. Put the NetHunter zip image you downloaded or built in the `/kaliNethunter` folder.
 
