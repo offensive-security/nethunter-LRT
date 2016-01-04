@@ -61,7 +61,7 @@ This script needs to be launched like so: `./twrpFlash.sh`.
 
 If you are using an Aroma version of the Kali Linux NetHunter zip, you will need to do a little interaction with the installer, then the script will end the installation and reboot the phone.
 
-###3. Rejoice in your newly installed NetHunter
+##3. Rejoice in your newly installed NetHunter
 
 Be joyful and merry! You have now finished installing NetHunter on your phone and are ready for world domination. Check out some of our [NetHunter Post Installation tips](https://github.com/offensive-security/kali-nethunter/wiki#50-post-installation-setup) to get started.
 
