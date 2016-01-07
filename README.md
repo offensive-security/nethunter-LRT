@@ -19,7 +19,7 @@ The **NetHunter Linux Root Toolkit** is a collection of bash scripts that setup 
 
 2. Download the correct Factory Image for your device and put it in the folder `/stockImage`:
     -  *Nexus devices:* from [Google Nexus Images](https://developers.google.com/android/nexus/images?hl=en)
-    -  *OnePlusOne:* from [cyngn.com](https://cyngn.com/support) (donwload the fastboot version for your device)
+    -  *OnePlusOne:* from [cyngn.com](https://cyngn.com/support) (download the fastboot version for your device)
 
 3. Download the correct TWRP image for your device from [TWRP WEB](https://twrp.me/Devices/) and put it in the folder `/twrpImage`.
 
