@@ -23,15 +23,13 @@ isAdbConnected () {
 }
 
 isAdbLatest(){
-    # Remove periods from version numbers
-    adbLatest="1033"
-    adbVersion=`adb 2>&1 | awk -F '"' '/Android Debug Bridge version/' | cut -c30- | tr -d '.'`
+    adbLatest=1.0.32
+    adbVersion=$(adb 2>&1 | awk -F '"' '/Android Debug Bridge version/' | cut -c30-)
     
-    if [ "$adbVersion" -lt "$adbLatest" ]; then
-        echo "You are using an older version of ADB. Please download the latest ADB."
-        read -p "Continue..."
+    if [[ "$adbVersion" < "$adbLatest" ]]; then
+        echo "You are using ADB ${adbVersion} and should upgrade to ${adbLatest}"
     else
-        echo "You are using the latest version of ADB"
+        echo "You are using the latest version of ADB ${adbVersion}"
     fi    
 }
 
