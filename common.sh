@@ -22,17 +22,6 @@ isAdbConnected () {
     if [ "$adbState" = "device" ] || [ "$adbState" = "recovery" ] ; then echo "ADB device detected."; else echo "ADB DEVICE NOT DETECTED!!!\nAborting."; exit 1; fi
 }
 
-isAdbLatest(){
-    adbLatest=1.0.32
-    adbVersion=$(adb 2>&1 | awk -F '"' '/Android Debug Bridge version/' | cut -c30-)
-    
-    if [[ "$adbVersion" < "$adbLatest" ]]; then
-        echo "You are using ADB ${adbVersion} and should upgrade to ${adbLatest}"
-    else
-        echo "You are using the latest version of ADB ${adbVersion}"
-    fi    
-}
-
 opoModelCheck () {
     opo16="16gb"
     opo64="64gb"
@@ -51,8 +40,6 @@ opoModelCheck () {
 doCommonChecks () {
 
     isProgramInPath adb
-
-    isAdbLatest
 
     isProgramInPath fastboot
 
