@@ -1,0 +1,280 @@
+{
+  "sdk": [
+    {
+    "windows":"http://tools.android.com/download/sdk-repo-windows-platform-tools-2219198.zip",
+    "osx":"http://tools.android.com/download/sdk-repo-darwin-platform-tools-2219242.zip",
+    "linux":"http://tools.android.com/download/sdk-repo-linux-platform-tools-2219198.zip",
+    "adb_version":"1.0.32"
+    }
+    ],
+  "devices": [
+    {
+      "device": "Nexus 4",
+      "twrp": "https://dl.twrp.me/mako/twrp-2.8.7.0-mako.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/occam-lmy48t-factory-416938f1.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-mako-lollipop-3.0.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 5",
+      "twrp": "https://dl.twrp.me/hammerhead/twrp-2.8.7.1-hammerhead.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/hammerhead-lmy48m-factory-bf3c82fd.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-hammerhead-lollipop-3.0.zip"
+            }
+          ]
+        },
+        {
+          "6.0.1": [
+            {
+              "factory": "https://images.offensive-security.com/nethunter-release/nethunter-hammerhead-marshmallow-3.0.zip"
+            },
+            {
+              "nethunter": "http://url"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 5X",
+      "twrp": "https://dl.twrp.me/bullhead/twrp-2.8.7.2-bullhead.img",
+      "version": [
+        {
+          "6.0.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/bullhead-mmb29k-factory-a5eaf715.tgz"
+            },
+            {
+              "nethunter": "http://url"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 6",
+      "twrp": "https://dl.twrp.me/shamu/twrp-2.8.7.1-shamu.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/shamu-lmy48y-factory-df0504a8.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-shamu-lollipop-3.0.zip"
+            }
+          ]
+        },
+        {
+          "6.0.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/shamu-mmb29k-factory-9a76896b.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-shamu-marshmallow-3.0.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 6P",
+      "twrp": "https://dl.twrp.me/angler/twrp-2.8.7.2-angler.img",
+      "version": [
+        {
+          "6.0.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/angler-mmb29m-factory-8c31db3f.tgz"
+            },
+            {
+              "nethunter": "http://url"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 7 - 2012 (Wifi)",
+      "twrp": "https://dl.twrp.me/grouper/twrp-2.8.7.0-grouper.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/nakasi-lmy47v-factory-b48bd71d.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-grouper-lollipop-3.0.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 7 - 2012 (Mobile)",
+      "twrp": "https://dl.twrp.me/tilapia/twrp-2.8.7.0-tilapia.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/nakasig-lmy47v-factory-b2d44613.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-grouper-lollipop-3.0.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 7 - 2013 (Wifi)",
+      "twrp": "https://dl.twrp.me/flo/twrp-2.8.7.0-flo.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/razor-lmy48t-factory-b6a844f2.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flo-lollipop-3.0.zip"
+            }
+          ]
+        },
+        {
+          "6.0.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/razor-mmb29k-factory-a39e7047.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flo-marshmallow-3.0.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 7 - 2013 (Mobile)",
+      "twrp": "https://dl.twrp.me/deb/twrp-2.8.7.1-deb.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/razorg-lmy48z-factory-68da1543.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flo-lollipop-3.0.zip"
+            }
+          ]
+        },
+        {
+          "6.0.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/razorg-mmb29k-factory-44d21f0a.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flo-marshmallow-3.0.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 9 (Wifi)",
+      "twrp": "https://dl.twrp.me/flounder/twrp-2.8.7.1-flounder.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/volantis-lmy48t-factory-adc99323.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flounder-lollipop-3.0.zip"
+            }
+          ]
+        },
+        {
+          "6.0.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/volantis-mmb29k-factory-c25ba34c.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flounder-marshmallow-3.0.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 9 (Mobile)",
+      "twrp": "https://dl.twrp.me/flounder/twrp-2.8.7.1-flounder.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/volantisg-lmy48z-factory-e823c2df.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flounder-lollipop-3.0.zip"
+            }
+          ]
+        },
+        {
+          "6.0.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/volantisg-mmb29k-factory-01a6fa43.tgz"
+            },
+            {
+              "nethunter": "http://url"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "Nexus 10",
+      "twrp": "https://dl.twrp.me/manta/twrp-2.8.7.0-manta.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/mantaray-lmy48z-factory-584a4d03.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-manta-lollipop-3.0.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device": "OnePlus 1",
+      "twrp": "https://dl.twrp.me/bacon/twrp-2.8.7.0-bacon.img",
+      "version": [
+        {
+          "5.1.1": [
+            {
+              "factory": "http://builds.cyngn.com/factory/bacon/cm-12.1-YOG4PAS3JL-bacon-signed-fastboot.zip"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-oneplus1-lollipop-3.0.zip"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
