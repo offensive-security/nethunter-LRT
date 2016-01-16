@@ -12,23 +12,26 @@ def over9000(adb, fastboot, platform):
 
     if platform == "win32":
         path = "tmp\\"
-        flashall = path + "flash-all.bat"
+        flashall = "flash-all.bat"
         oneplus_check = path + "sbl1.mbn"
         oneplus = os.path.exists(oneplus_check)
     else:
         path = "tmp/"
-        flashall = path + "flash-all.sh"
+        flashall = "flash-all.sh"
         oneplus_check = path + "sbl1.mbn"
         oneplus = os.path.exists(oneplus_check)
         if not oneplus:
             os.system("chmod 755 " + flashall)
+            flashall = "./" + flashall
 
     print("Rebooting into bootloader")
     os.system(adb + " reboot bootloader")
     time.sleep(5)
     if not oneplus:
         print("Flasing Stock Rom\n!!!! DONT UNPLUG THE DEVICE !!!!")
+        os.chdir(path)
         os.system(flashall)
+        os.chdir(os.pardir)
         print("Flasing Stock Rom DONE")
         print("Removing untar'd factory files")
         if os.path.exists(path):
@@ -54,6 +57,7 @@ def over9000(adb, fastboot, platform):
                     answer = None
             except:
                 print("Incorrect selection")
+        os.chdir(path)
         os.system(fastboot + " flash sbl1 sbl1.mbn")
         time.sleep(3)
         os.system(fastboot + " flash dbi sdi.mbn")
@@ -93,6 +97,7 @@ def over9000(adb, fastboot, platform):
         os.system(fastboot + " continue")
         time.sleep(3)
         print("OnePlus factory is flashed")
+        os.chdir(os.pardir)
 
 
 def over9001(adb, fastboot, platform, twrp, nethunter, supersu):
