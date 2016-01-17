@@ -41,10 +41,10 @@
         {
           "6.0.1": [
             {
-              "factory": "https://images.offensive-security.com/nethunter-release/nethunter-hammerhead-marshmallow-3.0.zip"
+              "factory": "https://dl.google.com/dl/android/aosp/hammerhead-mmb29s-factory-6bfcdfa4.tgz"
             },
             {
-              "nethunter": "http://url"
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-hammerhead-marshmallow-3.0.zip"
             }
           ]
         }
@@ -83,7 +83,7 @@
         {
           "6.0.1": [
             {
-              "factory": "https://dl.google.com/dl/android/aosp/shamu-mmb29k-factory-9a76896b.tgz"
+              "factory": "https://dl.google.com/dl/android/aosp/shamu-mmb29s-factory-fc7b590e.tgz"
             },
             {
               "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-shamu-marshmallow-3.0.zip"
@@ -157,7 +157,7 @@
         {
           "6.0.1": [
             {
-              "factory": "https://dl.google.com/dl/android/aosp/razor-mmb29k-factory-a39e7047.tgz"
+              "factory": "https://dl.google.com/dl/android/aosp/razor-mmb29o-factory-dfe7fcb2.tgz"
             },
             {
               "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flo-marshmallow-3.0.zip"
@@ -183,7 +183,7 @@
         {
           "6.0.1": [
             {
-              "factory": "https://dl.google.com/dl/android/aosp/razorg-mmb29k-factory-44d21f0a.tgz"
+              "factory": "https://dl.google.com/dl/android/aosp/razorg-mmb29o-factory-8b9c0c1c.tgz"
             },
             {
               "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flo-marshmallow-3.0.zip"
@@ -235,10 +235,10 @@
         {
           "6.0.1": [
             {
-              "factory": "https://dl.google.com/dl/android/aosp/volantisg-mmb29k-factory-01a6fa43.tgz"
+              "factory": "https://dl.google.com/dl/android/aosp/razorg-mmb29o-factory-8b9c0c1c.tgz"
             },
             {
-              "nethunter": "http://url"
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flounder-lollipop-3.0.zip"
             }
           ]
         }
