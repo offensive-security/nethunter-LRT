@@ -28,18 +28,11 @@ def over9000(adb, fastboot, platform):
     os.system(adb + " reboot bootloader")
     time.sleep(5)
     if not oneplus:
-        print("Flasing Stock Rom\n!!!! DONT UNPLUG THE DEVICE !!!!")
+        print("Flashing Factory Image\n!!!! DONT UNPLUG THE DEVICE !!!!")
         os.chdir(path)
         os.system(flashall)
         os.chdir(os.pardir)
-        print("Flasing Stock Rom DONE")
-        print("Removing untar'd factory files")
-        if os.path.exists(path):
-            shutil.rmtree(path)
-        print("Removed folder " + path)
-        print("\nThe device should be rebooting, once it is booted do the initial setup,")
-        print("enable developer options and USB debugging again.\n\n")
-        raw_input("Press any key to continue...")
+        print("Flashing factory image done!")
     else:
         print("Detected a OnePlus factory image")
         answer = True
@@ -99,6 +92,14 @@ def over9000(adb, fastboot, platform):
         print("OnePlus factory is flashed")
         os.chdir(os.pardir)
 
+    print("Removing untar'd factory files")
+    if os.path.exists(path):
+        shutil.rmtree(path)
+    print("Removed folder %s" % path)
+    print("\nThe device should be rebooting, once it is booted do the initial setup,")
+    print("enable developer options and USB debugging again.\n\n")
+    print("If you want to encrypt your device you should do it now.\n\n")
+    raw_input("Press any key to continue...")
 
 def over9001(adb, fastboot, platform, twrp, nethunter):
     '''
