@@ -21,7 +21,7 @@ def over9000(adb, fastboot, platform):
         oneplus_check = path + "sbl1.mbn"
         oneplus = os.path.exists(oneplus_check)
         if not oneplus:
-            os.system("chmod 755 " + flashall)
+            os.system("chmod 755 " + path + flashall)
             flashall = "./" + flashall
 
     print("Rebooting into bootloader")
