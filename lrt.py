@@ -118,7 +118,7 @@ def parse_json(selected_device, platform):
         version_string = x.return_version()
         print("[%s] %s:  %s" % (i, selected_device, version_string))  # Menu item: [1] Nexus 4: 5.0.1
         i += 1  # Increment menu item by one
-    print("[0] Exit to main menu\n")
+    print("\n[0] Exit to main menu\n")
     answer = True
     while answer:
         try:
@@ -193,7 +193,7 @@ def menu2(device_object, platform, adb, fastboot):
             print("[2] OEM Unlock (only needed once)")
             print("[3] Flash Factory Images")
             print("[4] Flash TWRP and Nethunter")
-            print("[0] Exit\n")
+            print("\n[0] Exit\n")
             menu_choice = int(raw_input('Select: '))
             if menu_choice == 0:
                 answer = None
@@ -245,13 +245,13 @@ def menu2(device_object, platform, adb, fastboot):
 
                 # TWRP and Nethunter files found, execute
                 if twrp and nethunter and supersu:
-                    print("%s and %s found!  Starting Nethunter install..." % (twrp_filename, nethunter_filename))
-                    over9001((adb, fastboot, platform, twrp_filename, nethunter_filename))
-                if not twrp:
+                    print("%s and %s found!\nStarting Nethunter install..." % (twrp_filename, nethunter_filename))
+                    over9001(adb, fastboot, platform, twrp_filename, nethunter_filename)
+                elif not twrp:
                     print("Missing %s!" % twrp_filename)
-                if not nethunter:
+                elif not nethunter:
                     print("Missing %s!" % nethunter_filename)
-                if not supersu:
+                elif not supersu:
                     print("Missing supersu.zip!")
         except:
             print("Incorrect selection")

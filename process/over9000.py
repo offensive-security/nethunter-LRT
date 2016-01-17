@@ -100,10 +100,16 @@ def over9000(adb, fastboot, platform):
         os.chdir(os.pardir)
 
 
-def over9001(adb, fastboot, platform, twrp, nethunter, supersu):
+def over9001(adb, fastboot, platform, twrp, nethunter):
     '''
     This function is to used to flash SuperSU, TWRP, and Nethunter.
     '''
+
+    # Debug
+    print('Fastboot: %s\nADB: %s' % (fastboot, adb))
+    print('TWRP: %s\nNETHUNTER: %s' % (twrp, nethunter))
+
+    raw_input('Make sure ADB is enabled and device is plugged in.  Press enter to continue...')
 
     if platform == "win32":
         nh_path = "nhzip\\" + nethunter
@@ -125,18 +131,14 @@ def over9001(adb, fastboot, platform, twrp, nethunter, supersu):
     print("Sending SuperSU to /sdcard")
     os.system(adb + " push -p " + supersu_path + " " + sdsu)
     time.sleep(3)
-
-    # adb push -p supersu/supersu.zip /sdcard/supersu.zip
-    os.system(adb + " push -p " + supersu_path + " " + sdsu)
-    time.sleep(3)
     print("Rebooting into bootloader")
     os.system(adb + " reboot bootloader")
-    time.sleep(5)
+    time.sleep(8)
     print("Flashing TWRP recovery image")
-    os.system(fastboot + " fastboot flash recovery " + twrp_path)
+    os.system(fastboot + " flash recovery " + twrp_path)
     time.sleep(3)
     print("Flashing TWRP done!")
-    os.system(fastboot + " fastboot boot " + twrp_path)
+    os.system(fastboot + " boot " + twrp_path)
     time.sleep(20)
     print("Booted into TWRP")
     print("Installing SuperSU")
