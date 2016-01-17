@@ -148,7 +148,7 @@ def menu(device_list, platform):
     for device in device_list:
         print("[%i] %s" % (i, device))  # example: [1] nexus4
         i += 1  # Add 1 for each menu item
-    print "[0] Exit\n"
+    print "\n[0] Exit\n"
 
     answer = True
     while answer:
@@ -199,9 +199,19 @@ def menu2(device_object, platform, adb, fastboot):
                 answer = None
             if menu_choice == 1:
                 try:
-                    download_twrp(twrp_url, twrp_filename, platform)
-                    download_nethunter(nethunter_url, platform)
-                    download_factory(factory_url, factory_filename, platform)
+                    twrp, nethunter, factory, supersu = check_for_files(twrp_filename, nethunter_filename, factory_filename, platform)
+                    if twrp:
+                        print('TWRP already found-skipping')
+                    else:
+                        download_twrp(twrp_url, twrp_filename, platform)
+                    if nethunter:
+                        print('Nethunter zip already found-skipping')
+                    else:
+                        download_nethunter(nethunter_url, platform)
+                    if factory:
+                        print('Factory zip already found-skipping')
+                    else:
+                        download_factory(factory_url, factory_filename, platform)
                 except urllib2.HTTPError, e:
                     print('HTTPError = ' + str(e.code))
                 except urllib2.URLError, e:
