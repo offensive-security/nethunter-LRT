@@ -27,6 +27,7 @@ def over9000(adb, fastboot, platform):
     print("Rebooting into bootloader")
     os.system(adb + " reboot bootloader")
     time.sleep(5)
+    raw_input("When the device is in fastboot, press enter to flash...")
     if not oneplus:
         print("Flashing Factory Image\n!!!! DONT UNPLUG THE DEVICE !!!!")
         os.chdir(path)

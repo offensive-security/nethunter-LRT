@@ -14,6 +14,24 @@ except urllib2.HTTPError, e:
         json_data = json.load(data_file)
     pass
 
+
+class Bcolors:
+    BOLD = '\033[95m'
+    BOLD = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+    def disable(self):
+        self.BOLD = ''
+        self.BOLD = ''
+        self.OKGREEN = ''
+        self.WARNING = ''
+        self.FAIL = ''
+        self.ENDC = ''
+
+
 class DeviceVersion:
     def __init__(self, new_dic):
 
@@ -47,7 +65,7 @@ def download_progress_bar(url):
         u = urllib2.urlopen(url)
         f = open(file_name, 'wb')
         meta = u.info()
-        file_size = int(meta.getheaders("Content-Length")[0])
+        file_size = int(meta.getBOLDs("Content-Length")[0])
         print "Downloading: %s Bytes: %s" % (file_name, file_size)
 
         file_size_dl = 0
@@ -113,12 +131,12 @@ def parse_json(selected_device, platform):
                         obj = DeviceVersion(newdic)  # Create a new object for each version
                         obj_list.append(obj)         # Append that object to a list
 
-    print("Select Android OS version to flash\n")
+    print("\t" + Bcolors.BOLD + "Select Android OS version to flash" + Bcolors.ENDC + "\n")
     for x in obj_list:
         version_string = x.return_version()
-        print("[%s] %s:  %s" % (i, selected_device, version_string))  # Menu item: [1] Nexus 4: 5.0.1
+        print("\t[%s] %s:  %s" % (i, selected_device, version_string))  # Menu item: [1] Nexus 4: 5.0.1
         i += 1  # Increment menu item by one
-    print("\n[0] Exit to main menu\n")
+    print("\n\t[0] Exit to main menu\n")
     answer = True
     while answer:
         try:
@@ -144,11 +162,13 @@ def menu(device_list, platform):
 
     i = 1  # Set first menu item to 1
 
-    print("\nKali NetHunter Linux Root Toolkit\n\n")
+    print("\n\t\t\t" + Bcolors.BOLD + "Kali NetHunter Linux Root Toolkit\n" + Bcolors.ENDC +
+          "\n\t\t\t\t" + Bcolors.WARNING + "* WARNING *" + Bcolors.ENDC +
+          "\n\t" + Bcolors.WARNING + "Flashing your device can lead to data loss and void your warranty or worse.\n\n" + Bcolors.ENDC)
     for device in device_list:
-        print("[%i] %s" % (i, device))  # example: [1] nexus4
+        print("\t[%i] %s" % (i, device))  # example: [1] nexus4
         i += 1  # Add 1 for each menu item
-    print "\n[0] Exit\n"
+    print "\n\t[0] Exit\n"
 
     answer = True
     while answer:
@@ -188,12 +208,12 @@ def menu2(device_object, platform, adb, fastboot):
                 os.system('cls')
             else:
                 os.system('clear')
-            print("* You should folllow steps in order to flash Nethunter *\n\n")
-            print("[1] Download required files (factory/nethunter/twrp)")
-            print("[2] OEM Unlock (only needed once)")
-            print("[3] Flash Factory Images")
-            print("[4] Flash TWRP and Nethunter")
-            print("\n[0] Exit\n")
+            print("\t" + Bcolors.BOLD + "* You should folllow steps in order to flash Nethunter *" + Bcolors.ENDC + "\n\n")
+            print("\t[1] Download required files (factory/nethunter/twrp)")
+            print("\t[2] OEM Unlock (only needed once)")
+            print("\t[3] Flash Factory Images")
+            print("\t[4] Flash TWRP and Nethunter")
+            print("\n\t[0] Exit\n")
             menu_choice = int(raw_input('Select: '))
             if menu_choice == 0:
                 answer = None
