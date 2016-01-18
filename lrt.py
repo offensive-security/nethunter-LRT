@@ -108,10 +108,6 @@ def parse_json(selected_device, platform):
     {u'device': u'nexus4', u'version': [{u'nethunter': u'http://url'}]}, {u'5.1.1': [{u'factory': u'https://dl.google.com/dl/android/aosp/occam-lmy48t-factory-416938f1.tgz'}, {u'nethunter': u'http://url'}]}], u'twrp': u'https://dl.twrp.me/mako/twrp-2.8.7.0-mako.img'}
     This is returned so it can be more manageable.
     '''
-    if platform == "win32":
-        os.system('cls')
-    else:
-        os.system('clear')
 
     obj_list = []   # Hold values for every object (version number) we create
     i = 1  # Set menu item to 1
@@ -131,15 +127,20 @@ def parse_json(selected_device, platform):
                         obj = DeviceVersion(newdic)  # Create a new object for each version
                         obj_list.append(obj)         # Append that object to a list
 
-    print("\t" + Bcolors.BOLD + "Select Android OS version to flash" + Bcolors.ENDC + "\n")
-    for x in obj_list:
-        version_string = x.return_version()
-        print("\t[%s] %s:  %s" % (i, selected_device, version_string))  # Menu item: [1] Nexus 4: 5.0.1
-        i += 1  # Increment menu item by one
-    print("\n\t[0] Exit to main menu\n")
+
     answer = True
     while answer:
         try:
+            if platform == "win32":
+                os.system('cls')
+            else:
+                os.system('clear')
+            print("\n\t" + Bcolors.BOLD + "Select Android OS version to flash" + Bcolors.ENDC + "\n")
+            for x in obj_list:
+                version_string = x.return_version()
+                print("\t[%s] %s:  %s" % (i, selected_device, version_string))  # Menu item: [1] Nexus 4: 5.0.1
+                i += 1  # Increment menu item by one
+            print("\n\t[0] Exit to main menu\n")
             menu_choice = int(raw_input("Select version number: "))
             if menu_choice == 0:
                 answer = None
@@ -155,24 +156,22 @@ def parse_json(selected_device, platform):
 
 def menu(device_list, platform):
 
-    if platform == "win32":
-        os.system('cls')
-    else:
-        os.system('clear')
-
     i = 1  # Set first menu item to 1
-
-    print("\n\t\t\t" + Bcolors.BOLD + "Kali NetHunter Linux Root Toolkit\n" + Bcolors.ENDC +
-          "\n\t\t\t\t" + Bcolors.WARNING + "* WARNING *" + Bcolors.ENDC +
-          "\n\t" + Bcolors.WARNING + "Flashing your device can lead to data loss and void your warranty or worse.\n\n" + Bcolors.ENDC)
-    for device in device_list:
-        print("\t[%i] %s" % (i, device))  # example: [1] nexus4
-        i += 1  # Add 1 for each menu item
-    print "\n\t[0] Exit\n"
 
     answer = True
     while answer:
         try:
+            if platform == "win32":
+                os.system('cls')
+            else:
+                os.system('clear')
+            print("\n\t\t\t" + Bcolors.BOLD + "Kali NetHunter Linux Root Toolkit\n" + Bcolors.ENDC +
+                  "\n\t\t\t\t" + Bcolors.WARNING + "* WARNING *" + Bcolors.ENDC +
+                  "\n\t" + Bcolors.WARNING + "Flashing your device can lead to data loss and void your warranty or worse.\n\n" + Bcolors.ENDC)
+            for device in device_list:
+                print("\t[%i] %s" % (i, device))  # example: [1] nexus4
+                i += 1  # Add 1 for each menu item
+            print "\n\t[0] Exit\n"
             menu_choice = int(raw_input('Select: '))
             if menu_choice == 0:
                 answer = None
@@ -208,7 +207,7 @@ def menu2(device_object, platform, adb, fastboot):
                 os.system('cls')
             else:
                 os.system('clear')
-            print("\t" + Bcolors.BOLD + "* You should folllow steps in order to flash Nethunter *" + Bcolors.ENDC + "\n\n")
+            print("\n\t" + Bcolors.BOLD + "* You should folllow steps in order to flash Nethunter *" + Bcolors.ENDC + "\n\n")
             print("\t[1] Download required files (factory/nethunter/twrp)")
             print("\t[2] OEM Unlock (only needed once)")
             print("\t[3] Flash Factory Images")
