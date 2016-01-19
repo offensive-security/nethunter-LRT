@@ -267,7 +267,7 @@
         {
           "5.1.1": [
             {
-              "factory": "http://builds.cyngn.com/factory/bacon/cm-12.1-YOG4PAS3JL-bacon-signed-fastboot.zip"
+              "factory": "http://builds.cyngn.com/factory/bacon/cm-12.1-YOG7DAS2K1-bacon-signed-fastboot-bed37f2e18.zip"
             },
             {
               "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-oneplus1-lollipop-3.0.zip"
