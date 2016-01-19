@@ -2,6 +2,7 @@ import tarfile
 import urllib2
 import mechanize
 import os
+import zipfile
 
 import shutil
 
@@ -39,7 +40,29 @@ def download_factory(factory_link, filename, platform):
     print("Starting factory download")
     filename = path + filename
     download_progress_bar(factory_link, path)
-    untar_tgz(filename, platform)
+    if filename.endswith('.tgz'):
+        untar_tgz(filename, platform)
+    elif filename.endswith('.zip'):
+        unzip_zip(filename, platform)
+
+
+def unzip_zip(source_filename, platform):
+
+    if platform == "win32":
+        dest_dir = "tmp\\"
+    else:
+        dest_dir = "tmp/"
+
+    if os.path.exists(dest_dir):
+        print("Found previous folder, removing")
+        shutil.rmtree(dest_dir)
+
+    if not os.path.exists(dest_dir):
+        os.makedirs(dest_dir)
+
+    print('Unzipping %s' % source_filename)
+    zipfilez = zipfile.ZipFile(source_filename)
+    zipfilez.extractall(dest_dir)
 
 
 def untar_tgz(filename, platform):

@@ -187,7 +187,7 @@ def menu(device_list, platform):
 
 
 def menu2(device_object, platform, adb, fastboot):
-    from process.downloadrequired import check_for_files, untar_tgz
+    from process.downloadrequired import check_for_files, untar_tgz, unzip_zip
     from process.over9000 import over9000, over9001
     from process.downloadrequired import download_twrp, download_nethunter, download_factory
 
@@ -242,10 +242,21 @@ def menu2(device_object, platform, adb, fastboot):
             if menu_choice == 3:
                 twrp, nethunter, factory, supersu = check_for_files(twrp_filename, nethunter_filename, factory_filename, platform)
 
-                # If factory file (tgz) is downloaded but not extracted, extract, and start!
+                # If factory file  is downloaded but not extracted, extract, and start!
                 if factory and not os.path.exists(factory_path):
-                    check = factory_path + factory_filename
-                    untar_tgz(check, platform)
+
+                    if platform == "win32":
+                        factory_folder = "factory\\"
+                    else:
+                        factory_folder = "factory/"
+
+                    check = factory_folder + factory_filename
+                    print check
+
+                    if check.endswith('.tgz'):
+                        untar_tgz(check, platform)
+                    elif check.endswith('.zip'):
+                        unzip_zip(check, platform)
                     over9000(adb, fastboot, platform)
 
                 # If factory file (tgz) and extracted folder exists, start!

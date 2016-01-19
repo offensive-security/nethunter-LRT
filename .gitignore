@@ -65,3 +65,6 @@ docs/_build/
 # PyBuilder
 target/
 .idea
+tmp/flash-base.sh
+tmp/flash-all.sh
+tmp/flash-all.bat

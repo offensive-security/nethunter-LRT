@@ -37,18 +37,18 @@ def over9000(adb, fastboot, platform):
     else:
         print("Detected a OnePlus factory image")
         answer = True
-        userdata_size = "16"
+        userdata_size = "userdata.img"
         while answer:
             try:
                 print("[1] 16gb Version")
                 print("[2] 64gb Version")
-                menu_choice = raw_input("Select size of device:")
+                menu_choice = int(raw_input("Select size of device: "))
                 if menu_choice == 1:
                     userdata_size = "userdata.img"
-                    answer = None
+                    break
                 if menu_choice == 2:
                     userdata_size = "userdata_64G.img"
-                    answer = None
+                    break
             except:
                 print("Incorrect selection")
         os.chdir(path)
@@ -101,6 +101,7 @@ def over9000(adb, fastboot, platform):
     print("enable developer options and USB debugging again.\n\n")
     print("If you want to encrypt your device you should do it now.\n\n")
     raw_input("Press any key to continue...")
+
 
 def over9001(adb, fastboot, platform, twrp, nethunter):
     '''
