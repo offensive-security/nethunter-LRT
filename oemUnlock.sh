@@ -22,6 +22,7 @@ echo "Rebooting into bootloader DONE\n"
 echo "Starting OEM UNLOCK"
 echo "This needs you interaction. Check phone screen."
 fastboot oem unlock
+fastboot flashing unlock
 echo "OEM UNLOCK DONE\n"
 
 echo "Rebooting the phone"
