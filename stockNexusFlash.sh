@@ -20,7 +20,7 @@ echo "CHECKING PRE-REQUISITES\n"
 
 doCommonChecks
 
-isProgramInPath tar
+isProgramInPath unzip
 
 echo "Checking stock image existence"
 isEmpty $stockImageDir
@@ -34,7 +34,7 @@ mkdir $romExtractionDir
 echo "Creating tmp dir $romExtractionDir DONE\n"
 
 echo "Extracting $(ls $stockImageDir*)"
-tar -xvf $stockImageDir* -C $romExtractionDir
+unzip $stockImageDir* -d $romExtractionDir
 echo "EXTACTING $(ls $stockImageDir*) DONE\n"
 
 echo "cd to $romExtractionDir"
