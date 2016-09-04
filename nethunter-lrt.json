@@ -63,6 +63,16 @@
               "nethunter": "http://url"
             }
           ]
+        },
+        {
+          "7.0": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/bullhead-nrd90m-factory-d215f148.tgz"
+            },
+            {
+              "nethunter": "http://url"
+            }
+          ]
         }
       ]
     },
@@ -178,6 +188,16 @@
           "6.0.1": [
             {
               "factory": "https://dl.google.com/dl/android/aosp/volantis-mob30w-factory-ca056581.tgz"
+            },
+            {
+              "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flounder-marshmallow-3.0.zip"
+            }
+          ]
+        },
+        {
+          "7.0": [
+            {
+              "factory": "https://dl.google.com/dl/android/aosp/volantis-nrd90m-factory-b718f71b.tgz"
             },
             {
               "nethunter": "https://images.offensive-security.com/nethunter-release/nethunter-flounder-marshmallow-3.0.zip"
