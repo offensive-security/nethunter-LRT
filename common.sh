@@ -1,19 +1,18 @@
 #!/bin/sh
 
-
 # HELP FUNCTIONS
 
 isProgramInPath () {
 	echo "Checking if $1 is installed"
     command -v $1 >/dev/null 2>&1 && echo "$1 FOUND" || { echo >&2 "We require $1 but it's not installed/in path.\nAborting."; exit 1; }
-    echo "Checking if $1 is installed DONE\n"
+    echo "Checking if $1 is installed ...DONE\n"
 }
 
-deleteGitIgnore () { 
+deleteGitIgnore () {
     rm -rf $1.gitignore
 }
 
-isEmpty () { 
+isEmpty () {
     if find $1 -maxdepth 0 -empty | read v; then echo "Dir $1 is empty. Files are missing\nAborting."; exit 1; else echo "Dir $1 has files"; fi
 }
 
@@ -34,17 +33,14 @@ opoModelCheck () {
             if [ "$1" = "$opo16" ] ; then fUserData="userdata.img"; fi
             if [ "$1" = "$opo64" ] ; then fUserData="userdata_64G.img"; fi
     fi
-
 }
 
 doCommonChecks () {
-
     isProgramInPath adb
 
     isProgramInPath fastboot
 
     echo "Adb connection check"
     isAdbConnected
-    echo "Adb connection check DONE\n"
-
+    echo "Adb connection check ...DONE\n"
 }
