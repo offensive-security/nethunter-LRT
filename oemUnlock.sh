@@ -11,26 +11,25 @@ echo "CHECKING PRE-REQUISITES\n"
 
 doCommonChecks
 
-echo "CHECKING PRE-REQUISITES DONE\n"
+echo "CHECKING PRE-REQUISITES ...DONE\n"
 sleep 3
 
 echo "Rebooting into bootloader"
 adb reboot bootloader
 sleep 5
-echo "Rebooting into bootloader DONE\n"
+echo "Rebooting into bootloader ...DONE\n"
 
 echo "Starting OEM UNLOCK"
 echo "This needs you interaction. Check phone screen."
 fastboot oem unlock
 fastboot flashing unlock
-echo "OEM UNLOCK DONE\n"
+echo "OEM UNLOCK ...DONE\n"
 
 echo "Rebooting the phone"
 fastboot continue
-echo "Rebooting the phone DONE\n"
+echo "Rebooting the phone ...DONE\n"
 
-
-
+# END
 
 echo "It can take a bit to boot up, dont worry. ^^\n"
 echo "You will need to enable developer options and USB debugging again.\n"
