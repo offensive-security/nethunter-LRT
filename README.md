@@ -5,10 +5,10 @@ The **NetHunter Linux Root Toolkit** is a collection of bash scripts that setup 
 ##1. Installation Prerequisites
  - USB debugging enabled on the phone.
  - USB debugging RSA fingerprint approved for the computer.
- - `adb` and `fastboot` installed and present in `$PATH`
+ - `adb` and `fastboot` installed and present in `$PATH` (higher than v1.0.31)
  - `tar && unzip` installed and present in `$PATH`
 
-*Use google if you don't know how to install adb or fastboot; the Android SDK is the best way although you can also use the binaries available at: http://tools.android.com/download.*
+*Use Google if you don't know how to install adb or fastboot; the Android SDK is the best way although you can also use the binaries available at: http://tools.android.com/download.*
 
 **Assumptions:** The device is normally booted, USB debugging is enabled, and the device is plugged into the Linux/OSX machine via a USB cable.
 
