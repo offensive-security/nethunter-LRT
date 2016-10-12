@@ -5,7 +5,7 @@
 
 # CONSTANTS
 
-# TWRP 
+# TWRP
 twrpImageDir=twrpImage/
 deleteGitIgnore $twrpImageDir
 twrpImage="$twrpImageDir"*
@@ -47,12 +47,14 @@ echo "CHECKING PRE-REQUISITES DONE\n"
 sleep 3
 
 echo "Sending Kali Nethunter zip to the device"
-adb push -p $nhZip $sdnh
+adb push -p $nhZip $sdnh 2>/dev/null ||
+	adb push $nhZip $sdnh
 sleep 3
 echo "Sending Kali Nethunter zip to the device DONE\n"
 
 echo "Sending SuperSu zip to the device"
-adb push -p $superSuZip $sdSupersu
+adb push -p $superSuZip $sdSupersu 2>/dev/null ||
+  adb push $superSuZip $sdSupersu
 sleep 3
 echo "Sending SuperSu zip to the device DONE\n"
 
