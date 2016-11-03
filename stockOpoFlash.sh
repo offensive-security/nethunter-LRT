@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # require functions
 . ./common.sh
@@ -12,43 +12,43 @@ romExtractionDir=_extracted
 
 # INIT
 
-echo "NETHUNTER LINUX FLASH (STOCK OPO Fastboot IMAGES)\n"
-echo "NOTE: THIS WILL FACTORY RESET THE DEVICE (15 secs to cancel using 'ctrl + c')\n"
+echo -e "NETHUNTER LINUX FLASH (STOCK OPO Fastboot IMAGES)\n"
+echo -e "NOTE: THIS WILL FACTORY RESET THE DEVICE (15 secs to cancel using 'ctrl + c')\n"
 sleep 15
 
-echo "CHECKING PRE-REQUISITES\n"
+echo -e "CHECKING PRE-REQUISITES\n"
 
 doCommonChecks
 
 isProgramInPath unzip
 
-echo "Checking stock image existence"
+echo -e "Checking stock image existence"
 isEmpty $stockImageDir
-echo "Checking stock image existence ...DONE\n"
+echo -e "Checking stock image existence ...DONE\n"
 
 opoModelCheck $1
 
-echo "CHECKING PRE-REQUISITES ...DONE\n"
+echo -e "CHECKING PRE-REQUISITES ...DONE\n"
 sleep 3
 
-echo "Creating tmp dir $romExtractionDir"
+echo -e "Creating tmp dir $romExtractionDir"
 mkdir -p $romExtractionDir
-echo "Creating tmp dir $romExtractionDir ...DONE\n"
+echo -e "Creating tmp dir $romExtractionDir ...DONE\n"
 
-echo "Extracting $(ls $stockImageDir*)"
+echo -e "Extracting $(ls $stockImageDir*)"
 unzip $stockImageDir* -d  $romExtractionDir
-echo "Extracting $(ls $stockImageDir*) ...DONE\n"
+echo -e "Extracting $(ls $stockImageDir*) ...DONE\n"
 
-echo "cd to $romExtractionDir"
+echo -e "cd to $romExtractionDir"
 cd $romExtractionDir/
-echo "cd to $romExtractionDir ...DONE\n"
+echo -e "cd to $romExtractionDir ...DONE\n"
 
-echo "Rebooting into bootloader"
+echo -e "Rebooting into bootloader"
 adb reboot bootloader
 sleep 5
-echo "Rebooting into bootloader ...DONE\n"
+echo -e "Rebooting into bootloader ...DONE\n"
 
-echo "Flashing stock ROM\n!!!! DONT UNPLUG THE DEVICE !!!!"
+echo -e "Flashing stock ROM\n!!!! DONT UNPLUG THE DEVICE !!!!"
 
 fastboot flash sbl1 sbl1.mbn
 sleep 3
@@ -87,15 +87,15 @@ sleep 3
 fastboot flash cache cache.img
 sleep 3
 fastboot continue
-echo "Flashing stock ROM ...DONE\n"
+echo -e "Flashing stock ROM ...DONE\n"
 
-echo "Deleting tmp dir $romExtractionDir"
+echo -e "Deleting tmp dir $romExtractionDir"
 rm -rf ../$romExtractionDir
-echo "Deleting tmp dir $romExtractionDir ...DONE\n"
+echo -e "Deleting tmp dir $romExtractionDir ...DONE\n"
 
 # END
 
-echo "The device should be rebooting, once it is booted,"
-echo "do the initial setup, enable developer options and USB debugging again.\n"
-echo "Next step is flashing TWRP && superSU && Kali Nethunter using twrpFlash.sh script\n"
+echo -e "The device should be rebooting, once it is booted,"
+echo -e "do the initial setup, enable developer options and USB debugging again.\n"
+echo -e "Next step is flashing TWRP && superSU && Kali Nethunter using twrpFlash.sh script\n"
 exit
