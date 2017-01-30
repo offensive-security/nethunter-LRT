@@ -81,7 +81,7 @@ fastboot boot $twrpImage
 sleep 20
 echo -e "Booting into TWRP ...DONE\n"
 
-read -n1 -r -p "Press enter when you're ready..." key
+read -n1 -r -p "Press any key when you're ready..." key
 
 
 # Installing
