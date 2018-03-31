@@ -25,6 +25,16 @@ fastboot oem unlock
 fastboot flashing unlock
 echo -e "OEM UNLOCK ...DONE\n"
 
+# https://source.android.com/setup/build/running
+# Note: On Nexus 10, after unlocking the bootloader, the internal storage remains unformatted.
+echo -e "Starting format cache"
+fastboot format cache
+echo -e "Starting format cache ...DONE\n"
+
+echo -e "Starting format userdata"
+fastboot format userdata
+echo -e "Starting format userdata ...DONE\n"
+
 echo -e "Rebooting the phone"
 fastboot continue
 echo -e "Rebooting the phone ...DONE\n"
