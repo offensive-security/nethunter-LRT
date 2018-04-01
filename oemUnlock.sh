@@ -21,8 +21,7 @@ echo -e "Rebooting into bootloader ...DONE\n"
 
 echo -e "Starting OEM UNLOCK"
 echo -e "This needs you interaction. Check phone screen."
-fastboot oem unlock
-fastboot flashing unlock
+fastboot flashing unlock || fastboot oem unlock
 echo -e "OEM UNLOCK ...DONE\n"
 
 # https://source.android.com/setup/build/running
@@ -36,7 +35,7 @@ fastboot format userdata
 echo -e "Starting format userdata ...DONE\n"
 
 echo -e "Rebooting the phone"
-fastboot continue
+fastboot continue || fastboot reboot
 echo -e "Rebooting the phone ...DONE\n"
 
 # END
