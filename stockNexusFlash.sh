@@ -5,6 +5,7 @@
 
 # CONSTANTS
 
+kaliNethunterHome=$(pwd)
 stockImageDir=stockImage/
 deleteGitIgnore $stockImageDir
 
@@ -47,11 +48,11 @@ sleep 5
 echo -e "Rebooting into bootloader ...DONE\n"
 
 echo -e "Flashing stock ROM\n!!!! DONT UNPLUG THE DEVICE !!!!"
-./flash-all.sh
+./flash-all.sh || fastboot -w update $kaliNethunterHome/$stockImageDir*
 echo -e "Flashing Stock ROM ...DONE\n"
 
 echo -e "Deleting tmp dir $romExtractionDir"
-rm -rf ../../$romExtractionDir
+rm -rf $kaliNethunterHome/$romExtractionDir
 echo -e "Deleting tmp dir $romExtractionDir ...DONE\n"
 
 # END
